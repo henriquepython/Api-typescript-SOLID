@@ -8,7 +8,7 @@ const app = express()
 app.use("/docs", swaggerUI.serve, swaggerUI.setup(swaggerDocs))
 
 app.use(express.json());
-app.use("v1", router);
+app.use(router);
 
 export { app }
 
