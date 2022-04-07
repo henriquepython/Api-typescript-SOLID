@@ -1,0 +1,55 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "API de mailtrap",
+        "description": "Essa API tem como objetivo enviar emails para o mailtrap",
+        "transOfService": "http://localhost:3000/terms",
+        "contact": {
+            "email": "joaohbp59@gmail.com"
+        },
+        "version": "1.0.0"
+    },
+    "servers": [
+        {
+            "url": "http://localhost:3000/v1",
+            "description": "API de teste"
+        }
+
+    ],
+    "paths": {
+        "/users": {
+            "post": {
+                "summary": "Envio de email",
+                "description": "Essa rota será responsavel por enviar emails para o mailtrap",
+                "tags": ["Users"],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/User"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+},
+"components": {
+    "schemas": {
+        "User": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "type": "string"
+                    },
+                    "email": {
+                        "type": "string"
+                    },
+                    "password": {
+                        "type": "string"
+                    }
+                }
+            }
+        }
+    }
+}
