@@ -22,7 +22,6 @@
                 "summary": "Envio de email",
                 "description": "Essa rota será responsavel por enviar emails para o mailtrap",
                 "tags": ["Users"],
-                "security": [{ "bearerAuth": [] }],
                 "requestBody": {
                     "content": {
                         "application/json": {
@@ -78,13 +77,6 @@
                         "type": "string"
                     }
                 }
-            }
-        },
-        "securitySchemes": {
-            "bearerAuth": {
-                "type": "http",
-                "scheme": "bearer",
-                "bearerFormat": "JWT"
             }
         }
     }
