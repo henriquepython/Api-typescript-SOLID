@@ -33,6 +33,9 @@ npm install
 
 # executar o projeto
 npm start
+
+# Acesso a documentação
+http://localhost:3000/docs
 ```
 
 #Tecnologias
